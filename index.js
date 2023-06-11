@@ -1,7 +1,8 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const path = require('path');
+const generateMarkdown = require('./utis/generateMarkdown');
 
 // Questions for user input
 const questions = [
@@ -39,21 +40,31 @@ const questions = [
       },
       {
         type: 'input',
-        message: 'What does the user meed to know about using the repo?',
+        message: 'What does the user need to know about using the repo?',
         name: 'usage',
       },
       {
         type: 'input',
-        message: 'What doews the user need to know about contributing to the Repo?',
+        message: 'What does the user need to know about contributing to the Repo?',
         name: 'contributing',
       },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((inquirerResponses) => {
+        console.log('Generating ReadMe...');
+
+        const markdown = generateMarkdown({ ...inquirerResponses });
+
+        writeToFile('ReadMe.MD', markdown);
+    })
+}
 
 // Function call to initialize app
 init();
