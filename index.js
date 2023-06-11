@@ -9,7 +9,7 @@ const questions = [
     {
         type: 'input',
         message: 'What is your Github username',
-        name: 'username',
+        name: 'github',
       },
       {
         type: 'input',
@@ -36,7 +36,7 @@ const questions = [
       {
         type: 'input',
         message: 'What command should be used to run tests?',
-        name: 'npm test',
+        name: 'test',
       },
       {
         type: 'input',
@@ -48,21 +48,26 @@ const questions = [
         message: 'What does the user need to know about contributing to the Repo?',
         name: 'contributing',
       },
+      {
+        type: 'input',
+        message: 'What does the user need to install to use the Repo?',
+        name: 'installation',
+      },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions).then((inquirerResponses) => {
-        console.log('Generating ReadMe...');
+        console.log('Generating ReadMe');
 
         const markdown = generateMarkdown({ ...inquirerResponses });
 
-        writeToFile('ReadMe.MD', markdown);
+        writeToFile('README.MD', markdown);
     })
 }
 

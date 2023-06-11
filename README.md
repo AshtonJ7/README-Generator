@@ -1,46 +1,45 @@
-# README-GENERATOR
+# readme-generator
 
 
 ## Decription
-It is an app that allows you to generate your own readme for github
+This is an app that allows you to create a Readme for your git repo
 
 ## Table of Contents
 
 * [Installation (#installation)]
 * [Usage (#usage)]
 
-* [Contributing (#contributing]
+* [Contributing (#contributing)]
 * [Tests (#tests)]
 * [Questions (#questions)]
 
-##Installation
+## Installation
 
 To install dependancies, run the following command:
 
-```
-undefined
-```
+
+npm init-y and npm i inquirer@8.2.4
+
 
 ## Usage
 
-the app requires you to download inquirer to work
+N/A
 
 
 
 ## Contributing
 
-nothing
+User will need node.js and inquirer despository to use the application.
 
 ## Tests
 
 Run the following command to run tests:
 
 ```
-undefined
+npm run test
 ```
 
 ## More information
 
 If you have any queries about the repo, open an issue or contact me at ashtonkabote@gmail.com.
-You can find my work at [undefined](https://github.com/undefined)
-/).
+You can find my work at [AshtonJ7](https://github.com/AshtonJ7).
