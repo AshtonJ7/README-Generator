@@ -23,6 +23,9 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
+## Walkthrough video
+
+[screen-recorder-sun-jun-11-2023-22-57-50.webm](https://github.com/AshtonJ7/README-Generator/assets/62944042/d8c0acc0-da93-4c64-88a5-49e45486002b)
 ## Decription
 This is an app that allows you to create a Readme for your git repo
 
@@ -65,3 +68,5 @@ npm run test
 
 If you have any queries about the repo, open an issue or contact me at ashtonkabote@gmail.com.
 You can find my work at [AshtonJ7](https://github.com/AshtonJ7).
+
+
