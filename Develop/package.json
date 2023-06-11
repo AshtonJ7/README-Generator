@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+  "inquirer": "^6.3.1"
+  },
   "bugs": {
     "url": "https://github.com/AshtonJ7/README-Generator/issues"
   },
